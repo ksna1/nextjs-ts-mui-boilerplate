@@ -1,3 +1,43 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals", "airbnb", "prettier"],
+  "plugins": ["prettier", "@typescript-eslint"],
+  "rules": {
+    "react/jsx-filename-extension": [
+      2,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "react/prop-types": ["off"],
+    "react/react-in-jsx-scope": "off",
+    "no-console": "error",
+    "import/prefer-default-export": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "class-methods-use-this": "off",
+    "no-param-reassign": "warn",
+    "no-shadow": "off",
+    "react/jsx-pascal-case": "off",
+    "no-underscore-dangle": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "react/no-unescaped-entities": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      { "devDependencies": false, "bundledDependencies": false }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
+  }
 }
